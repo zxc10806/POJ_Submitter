@@ -19,12 +19,19 @@ int findNum(char str[1005])
 }
 int main(void)
 {
+	char username[105];
+	char passwd[105];
+	printf("Username:");
+	scanf("%s",username);
+	printf("Password:");
+	scanf("%s",passwd);
+
 	FILE *fp = fopen("problem.txt","r");
 	while(fscanf(fp,"%s",filename)!=EOF)
 	{
 		int x = findNum(filename);
 			
-		sprintf(cmd,"judgesubmit poj %d %s -u zxc10806 -p a123456 -l cpp",x,filename);
+		sprintf(cmd,"judgesubmit poj %d %s -u %s -p %s -l cpp",x,filename,username,passwd);
 		system(cmd);
 		
 	}
