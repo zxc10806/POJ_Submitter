@@ -1,4 +1,0 @@
-POJ_3664.cpp
-POJ_3663.cpp
-POJ_3262.cpp
-POJ_1035.cpp
